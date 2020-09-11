@@ -12,17 +12,25 @@
         <properties>
             <property name="hibernate.archive.autodetection" value="class"/>
 
-            <!-- <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+            <!--<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/prueba" /> 
             <property name="hibernate.connection.username" value="root" /> 
-            <property name="hibernate.connection.password" value="mysql" /> -->
+            <property name="hibernate.connection.password" value="mysql" />-->
 
-            <property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver"/>
+           <!-- <property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver"/>
             <property name="hibernate.connection.url" value="jdbc:hsqldb:mem:app-db"/>
             <property name="hibernate.connection.username" value="sa"/>
             <property name="hibernate.connection.password" value=""/>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>-->
 
+
+            <!-- MSSQL-->
+
+            <property name="hibernate.connection.driver_class" value="com.sqlserver.jdbc.Driver" />
+            <property name="hibernate.connection.url" value="jdbc:sqlserver://localhost:3306/prueba" />
+            <property name="hibernate.connection.username" value="c:\Program Files\Microsoft SQL Server\MSSQL11.SQLEXPRESS\MSSQ" />
+            <property name="hibernate.connection.password" value="sqlserver" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
 
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>

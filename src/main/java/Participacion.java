@@ -1,9 +1,10 @@
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-public class Participacion {
+public class Participacion implements Serializable {
 
 	/*@Id
 	@GeneratedValue
@@ -11,14 +12,14 @@ public class Participacion {
 
 	//como es??? porque no reconoce a participacion como id?
 
-	@NaturalId
+	@Id
 	//@Transient
-	@OneToMany
+	@ManyToOne
 	Jugadores jugador; //PK FK
 
-	@NaturalId
+	@Id
 	//@Transient
-	@OneToMany
+	@ManyToOne
 	Partidos partido; //PK FK
 
 	@Transient

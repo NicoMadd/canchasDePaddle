@@ -8,10 +8,31 @@ public class Jugadores {
 
 	String nombre;
 	String apellido;
-	String domicilo;
+	String domicilio;
 	Integer nacimiento;
 
-	@Transient
+	//@Transient
 	@OneToOne
 	Paletas paleta; //FK
+	
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public void setApellido(String nombre) {
+		this.apellido = nombre;
+	}
+	
+	public void setDomicilio(String nombre) {
+		this.domicilio = nombre;
+	}
+	
+	public void setNacimiento(Integer dia) {
+		this.nacimiento = dia;
+	}
+	public void setPaleta(Paletas paleta) { this.paleta = paleta; }
+	
+	public int getId() {
+		return id_jugador;
+	}
 }

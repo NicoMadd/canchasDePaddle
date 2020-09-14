@@ -8,6 +8,13 @@
     <persistence-unit name="db" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
+        <class>Cancha</class>
+        <class>Color</class>
+        <class>Constructor</class>
+        <class>Jugadores</class>
+        <class>Paletas</class>
+        <class>Participacion</class>
+        <class>Partidos</class>
 
         <properties>
             <property name="hibernate.archive.autodetection" value="class"/>
@@ -26,11 +33,11 @@
 
             <!-- MSSQL-->
 
-            <property name="hibernate.connection.driver_class" value="com.sqlserver.jdbc.Driver" />
-            <property name="hibernate.connection.url" value="jdbc:sqlserver://localhost:3306/prueba" />
-            <property name="hibernate.connection.username" value="c:\Program Files\Microsoft SQL Server\MSSQL11.SQLEXPRESS\MSSQ" />
-            <property name="hibernate.connection.password" value="sqlserver" />
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/heidi" />
+            <property name="hibernate.connection.username" value="root" />
+            <property name="hibernate.connection.password" value="toor" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
 
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>

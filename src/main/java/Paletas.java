@@ -9,11 +9,11 @@ public class Paletas {
 	Integer grosor;
 
 
-	@Transient
+	//@Transient
 	@OneToOne
 	Color color; //FK
 
-	@Transient
+	//@Transient
 	@ManyToOne
 	Constructor constructor; //FK
 }

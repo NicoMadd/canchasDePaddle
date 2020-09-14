@@ -11,3 +11,4 @@ public class Color {
 
 	String descripcion;
 }
+

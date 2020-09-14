@@ -1,4 +1,10 @@
+import java.util.ArrayList;
+
 import javax.persistence.*;
+
+import com.mysql.cj.x.protobuf.MysqlxCrud.Collection;
+
+import antlr.collections.List;
 
 @Entity
 public class Partidos {
@@ -10,15 +16,15 @@ public class Partidos {
 	Integer fin_partido;
 
 
-	@Transient
+	//@Transient
 	@ManyToOne
-	Integer id_cancha; //FK
+	Cancha id_cancha; //FK
 
-	@Transient
+	//@Transient
 	@ManyToOne
-	Integer cod_color_cancha; //FK
+	Color cod_color_cancha; //FK
 
-	@Transient
-	@OneToMany
-	Integer id_jugador_responsable; //FK
+    //@Transient
+	@ManyToOne
+	Jugadores id_jugador_responsable; //FK
 }

@@ -1,28 +1,18 @@
-import org.hibernate.annotations.NaturalId;
-
-import javax.persistence.*;
 import java.io.Serializable;
 
+import javax.persistence.*;
+
 @Entity
-public class Participacion implements Serializable {
-
-	/*@Id
-	@GeneratedValue
-	Integer id_partipacion;*/
-
-	//como es??? porque no reconoce a participacion como id?
+public class Participacion implements Serializable{
 
 	@Id
-	//@Transient
 	@ManyToOne
 	Jugadores jugador; //PK FK
 
 	@Id
-	//@Transient
 	@ManyToOne
 	Partidos partido; //PK FK
 
-	@Transient
 	@ManyToOne
 	Paletas paleta; //FK
 }

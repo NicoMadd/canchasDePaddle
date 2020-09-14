@@ -2,6 +2,7 @@ import javax.persistence.*;
 
 @Entity
 public class Cancha {
+	
 	@Id
 	@GeneratedValue
 	Integer id_cancha; //PK
@@ -9,7 +10,7 @@ public class Cancha {
 	String nombre;
 	Boolean esta_iluminada;
 
-	@Transient
+	//@Transient
 	@ManyToOne
 	Color color; //FK
 }
